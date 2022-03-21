@@ -1,0 +1,50 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+  }
+
+  body,
+  html {
+    height: 100%;
+  }
+
+  /* button */
+  .homebutton {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 1px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .homebutton {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+
+  .homebutton:hover {
+    background-color: black;
+    color: white;
+  }
+
+  /* subscribe */
+  /* Add some padding and a grey background color to containers */
+  .container {
+    padding: 20px;
+    background-color: rgb(252, 249, 248);
+  }
+
+  .forms {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .fullHeight{
+    height: 100vh;
+  }

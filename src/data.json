@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "title": "Touch of Fall",
+        "content": "Vanilla Pumpkin Marshmallow",
+        "top": "Top: Sweet Cream", 
+        "middle": "Middle: Pumpkin",
+        "base": "Base: Bakery Spice",
+        "size": "8oz",
+        "price": "$10",
+        "imgSrc": "/images/6.png"
+    },
+    {
+        "id": 2,
+        "title": "Innovative",
+        "content": "Grapefruit Mango",
+        "top": "Top: Orange, Mandarin, Lemon", 
+        "middle": "Middle: Grapefruit, Peach",
+        "base": "Base: Red Currant, Vanilla",
+        "size": "8 oz",
+        "price": "$10",
+         "imgSrc": "/images/7.png"
+    },
+    {
+        "id": 3,
+        "title": "Admirer",
+        "content": "Black Sea",
+        "top": "Top: Sea Salt, Citrus", 
+        "middle": "Middle: Cardamom, Plum", 
+        "base": "Base: Dark Musk, Amber",
+        "size":"8 oz",
+        "price": "$10",
+        "imgSrc": "/images/9.png"
+    },
+    {
+        "id": 4,
+        "title": "Romance",
+        "content": "Amber Romance",
+        "top": "Top: Musk", 
+        "middle": "Middle: Water Floral",
+        "base": "Base: Vanilla, Sandalwood",
+        "size": "10 oz",
+        "price": "$15",
+        "imgSrc": "/images/1.png"  
+    },
+    {
+        "id": 5,
+        "title": "Daylight",
+        "content": "Fruit Slices",
+        "top": "Top: Fruity",
+        "middle": "Middle: Tropical, Exotic",
+        "base": "Base: Driftwood",
+        "size": "10 oz",
+        "price": "$15",
+        "imgSrc": "/images/2.png"  
+    },
+    {
+        "id": 6,
+        "title": "Comfort",
+        "content": "Black Raspberry Vanilla",
+        "top": "Top: Cirtus, Raspberry",
+        "middle": "Middle: Blackberry",
+        "base": "Base: Vanilla",
+        "size": "10 oz",
+        "price": "$15",
+        "imgSrc": "/images/3.png"
+    },
+    {
+        "id": 7,
+        "title": "Determined",
+        "content": "Tobacco Bay Leaf: 10 oz $15. Top: Citrus, Middle: Florals, Base: Cedar, Musk, Sandalwood"
+    },
+    {
+        "id": 8,
+        "title": "Infusion",
+        "content": "White Tea: 10 oz $15. Top: Lemon, Mandarin, Middle: Ginger, Bergamot, Base: White Tea, Jasmine"
+    },
+    {
+        "id": 9,
+        "title": "Euphoric",
+        "content": "Tobacco Caramel: 10 oz $15. Top: Orange, Middle: Tobacco Leaf, Lavender, Wood, Patchouli, Base: Caramelized Vanilla, Musk"
+    },
+    {
+        "id": 10,
+        "title": "Serene",
+        "content": "White Sage Lavender: 11 oz $15. Top: Eucalyptus, Pine, Middle: Rosemary, Floral, Base: Cedar, Sage "
+    },
+    {
+        "id": 11,
+        "title": "Brave",
+        "content": "Mahogany Teakwood: 12 oz $20. Top: Lavender, Middle: Rosemary, Sage, Chamomile, Base: Ceder, Sandalwood"
+    },
+    {
+        "id": 12,
+        "title": "Vino",
+        "content": "Black Cherry Merlot: 10 oz $15. Top: Black Currant, Middle: Clove, Red Wine, Black Cherry, Base: Amber, Vanilla, Oak"
+    }
+]

@@ -1,17 +1,25 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { render } from 'react-dom';
+import { BrowserRouter } from "react-router-dom";
+import Nav from './components/Nav.js';
+// import Slider from './components/Slider/Slider.js';
+import Footer from './components/Footer.js';
+import Products from './views/Products';
 
-ReactDOM.render(
-  <React.StrictMode>
+export {
+  Nav,
+  Footer,
+  Products
+}
+
+const rootElement = document.getElementById("root")
+render(
+  <BrowserRouter>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  </BrowserRouter>,
+  rootElement
+)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
