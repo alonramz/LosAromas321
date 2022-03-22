@@ -2,7 +2,7 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
-  .containers {
+  .productContainers {
     position: relative;
     width: 50%;
     flex: 33.33%;
@@ -25,6 +25,19 @@ body {
   }
 
   .middle {
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+    background-color: black;
+  }
+
+  .product .middle {
     opacity: 0;
     top: 50%;
     left: 50%;

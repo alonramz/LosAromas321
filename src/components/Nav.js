@@ -8,7 +8,7 @@ const NavBar = () => {
           <a href="/products">Shop</a>
           <a href="/contact">Contact</a>
           <a href="/checkout" className="right">
-            <i className="fa fa-shopping-cart" style={{ fontSize: "18px" }}></i>
+            <i className="fa fa-shopping-cart" style={{fontSize: "18px"}}></i>
           </a>
         </div>
       </nav>

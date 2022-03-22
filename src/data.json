@@ -68,31 +68,67 @@
     {
         "id": 7,
         "title": "Determined",
-        "content": "Tobacco Bay Leaf: 10 oz $15. Top: Citrus, Middle: Florals, Base: Cedar, Musk, Sandalwood"
+        "content": "Tobacco Bay Leaf",
+        "size": "10 oz",
+        "price": "$15",
+        "top": "Top: Citrus", 
+        "middle": "Middle: Florals", 
+        "base": "Base: Cedar, Musk, Sandalwood",
+        "imgSrc": "/images/5.png"
     },
     {
         "id": 8,
         "title": "Infusion",
-        "content": "White Tea: 10 oz $15. Top: Lemon, Mandarin, Middle: Ginger, Bergamot, Base: White Tea, Jasmine"
+        "content": "White Tea",
+        "size": "10 oz",
+        "price": "$15",
+        "top": "Top: Lemon, Mandarin", 
+        "middle": "Middle: Ginger, Bergamot", 
+        "base": "Base: White Tea, Jasmine",
+        "imgSrc": "/images/4.png"
     },
     {
         "id": 9,
         "title": "Euphoric",
-        "content": "Tobacco Caramel: 10 oz $15. Top: Orange, Middle: Tobacco Leaf, Lavender, Wood, Patchouli, Base: Caramelized Vanilla, Musk"
+        "content": "Tobacco Caramel",
+        "size": "10 oz",
+        "price": "$15",
+        "top": "Top: Orange", 
+        "middle": "Middle: Tobacco Leaf, Lavender, Wood, Patchouli", 
+        "base": "Base: Caramelized Vanilla, Musk",
+        "imgSrc": "/images/8.png"
     },
     {
         "id": 10,
         "title": "Serene",
-        "content": "White Sage Lavender: 11 oz $15. Top: Eucalyptus, Pine, Middle: Rosemary, Floral, Base: Cedar, Sage "
+        "content": "White Sage Lavender",
+        "size": "11 oz",
+        "price": "$15", 
+        "top": "Top: Eucalyptus, Pine", 
+        "middle": "Middle: Rosemary, Floral", 
+        "base": "Base: Cedar, Sage",
+        "imgSrc": "/images/11.png"
     },
     {
         "id": 11,
         "title": "Brave",
-        "content": "Mahogany Teakwood: 12 oz $20. Top: Lavender, Middle: Rosemary, Sage, Chamomile, Base: Ceder, Sandalwood"
+        "content": "Mahogany Teakwood",
+        "size": "12 oz",
+        "price": "$20",
+        "top": "Top: Lavender", 
+        "middle": "Middle: Rosemary, Sage, Chamomile", 
+        "base": "Base: Ceder, Sandalwood",
+        "imgSrc": "/images/12.png"
     },
     {
         "id": 12,
         "title": "Vino",
-        "content": "Black Cherry Merlot: 10 oz $15. Top: Black Currant, Middle: Clove, Red Wine, Black Cherry, Base: Amber, Vanilla, Oak"
+        "content": "Black Cherry Merlot",
+        "size": "10 oz",
+        "price": "$15",
+        "top": "Top: Black Currant", 
+        "middle": "Middle: Clove, Red Wine, Black Cherry", 
+        "base": "Base: Amber, Vanilla, Oak",
+        "imgSrc": "/images/10.png"
     }
 ]

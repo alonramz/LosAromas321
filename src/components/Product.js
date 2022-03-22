@@ -2,7 +2,7 @@ import React from "react";
 
 function Product({productObj}) {
   return (
-    <div className="containers">
+    <div className="productContainers">
       <div className="imageWrapper">
         <img
           src={productObj.imgSrc}
