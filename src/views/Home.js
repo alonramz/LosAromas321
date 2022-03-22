@@ -2,6 +2,8 @@ import React from "react";
 import "./Home.css";
 import Nav from "../components/Nav.js";
 import Footer from "../components/Footer";
+import ImageSlider from "../components/ImageSlider";
+import { SliderData } from "../components/SliderData";
 
 function Main() {
   return (
@@ -24,6 +26,8 @@ function Main() {
       </div>
 
       <Nav />
+
+      <ImageSlider slides={SliderData} />
 
       <main>
         <div className="rows">
