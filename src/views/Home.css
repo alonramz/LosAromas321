@@ -116,17 +116,15 @@ html {
 .slider {
   position: relative;
   height: 50vh;
-  display: flex;
   justify-self: center;
   align-items: center;
+  background-color: transparent;
 }
 
 .sliderimage{
   width: 50vh;
-  height: 50vh; 
-  align-items: center;
-  justify-self: center;
-  border-radius: 10px;
+  height: 50vh;
+  object-fit: contain;
 }
 
 .right-arrow {
@@ -149,5 +147,16 @@ html {
   z-index: 10;
   cursor: pointer;
   user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
 }
 
