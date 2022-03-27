@@ -116,6 +116,7 @@ html {
 .slider {
   position: relative;
   height: 50vh;
+  /* width: 100vh; */
   justify-self: center;
   align-items: center;
   background-color: transparent;

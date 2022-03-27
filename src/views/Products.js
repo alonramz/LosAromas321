@@ -12,6 +12,7 @@ function Products() {
     // {productList.map((p) => (
     //   <Product key={p.id} productObj={p} />
     // ))}
+
     <div className="Products">
       <Nav />
       <header>Candles</header>

@@ -29,7 +29,7 @@ function ContactUs() {
                 type="text"
                 id="fname"
                 name="firstname"
-                placeholder="Your name.."
+                placeholder="Your name.." required
               />
 
               <label for="lname">Last Name</label>
@@ -37,7 +37,7 @@ function ContactUs() {
                 type="text"
                 id="lname"
                 name="lastname"
-                placeholder="Your last name.."
+                placeholder="Your last name.." required
               />
 
               <label for="lname">Email</label>
@@ -45,7 +45,7 @@ function ContactUs() {
                 type="text"
                 id="email"
                 name="email"
-                placeholder="Your email.."
+                placeholder="Your email.." required
               />
 
               <label for="lname">Favorite Scents</label>
@@ -53,7 +53,7 @@ function ContactUs() {
                 type="text"
                 id="scents"
                 name="scents"
-                placeholder="Earthy, Floral, Sweet,"
+                placeholder="Earthy, Floral, Sweet," 
               />
 
               <label for="subject">Comments</label>
