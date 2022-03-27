@@ -34,6 +34,18 @@ app.listen(4000, () =>{
     console.log('console server listening to port 4000')
 })
 
+//get products from database using query selectors
+//get error or return results and send to end point
+app.get('/products', (req, res) => {
+    db.query('SELECT * FROM products', (err, result) =>{
+        if(err){
+            console.log(err)
+        }else{
+            res.send(result);
+        }
+    })
+})
+
 // app.get("/products", (req, res) => {
 //   db.query("SELECT * FROM products", (err, result) => {
 //     if (err) {
