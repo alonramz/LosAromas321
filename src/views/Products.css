@@ -24,7 +24,7 @@ body {
     backface-visibility: hidden;
   }
 
-  .middle {
+  .productmiddle {
     opacity: 0;
     top: 50%;
     left: 50%;
@@ -37,7 +37,7 @@ body {
     background-color: black;
   }
 
-  .product .middle {
+  .productMiddle {
     opacity: 0;
     top: 50%;
     left: 50%;
@@ -50,16 +50,21 @@ body {
     background-color: black;
   }
 
-  .imagewrapper:hover .middle {
+  .imageWrapper:hover  .productmiddle {
     opacity: 1;
   }
 
-  .imagewrapper:hover .image {
+  .imageWrapper:hover  .productMiddle {
+    opacity: 1;
+  }
+
+
+  .imageWrapper:hover .image {
     opacity: 0.3;
   }
 
   /* button */
-  .button {
+  .buttonButton1 {
     border: none;
     color: white;
     padding: 16px 32px;
@@ -71,24 +76,33 @@ body {
     cursor: pointer;
   }
 
-  .button1 {
+  .buttonButton1 {
     background-color: white;
     color: black;
     border: 2px solid black;
   }
 
-  .button1:hover {
+  .buttonButton1:hover {
     background-color: black;
     color: white;
   }
 
+  /* for searach bar */
+.items{
+  display: none;
+}
+
   /* Small screens */
-  @media all and (max-width: 500px) {
-    .middle {
-      display: inline-block;
-      font-size: 10px;
-      margin: auto;
-      padding: auto;
-      text-align: center;
-    }
+  @media all and (max-width: 375px) {
+      .productRows {
+      flex-direction: column;
+      justify-content: space-around;
+    } 
   }
+
+/* Small screens */
+@media all and (max-width: 375px) {
+  .navigation {
+    flex-direction: column;
+  }
+}

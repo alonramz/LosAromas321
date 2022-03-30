@@ -1,13 +1,15 @@
 import React from "react";
-// import productList from "../data.json";
+import productList from "../data.json";
 // import Product from "../components/Product";
 import "./Products.css";
 // import '../App.css';
 import Nav from "../components/Nav.js";
 import Footer from "../components/Footer";
+import {useState} from 'react' 
 
 function Products() {
-  // console.log(productList);
+  //want to search the term with input and give string
+  const [searchTerm, setSearchTerm] = useState('')
   return (
     // {productList.map((p) => (
     //   <Product key={p.id} productObj={p} />
@@ -16,6 +18,26 @@ function Products() {
     <div className="Products">
       <Nav />
       <header>Candles</header>
+
+      {/* <Product /> */}
+
+      {/* search bar, has an id and key from data.json */}
+      <input type="text" placeholder="Search a scent..." onChange={event => {setSearchTerm(event.target.value)}}/>
+      {/* setSearchTerm is assinged to whatver value is being searched */}
+      {productList.filter((id) => {
+        // filter method to fither out what we are searching for
+        if(searchTerm === "") {
+          return id
+        }else if (id.scent.toLowerCase().includes(searchTerm.toLowerCase())) {
+          return id
+        }
+      }).map((id, key) => {
+        return (
+          <div className="searchItems" key={key}>
+            <p className="scents">{id.scent} </p>
+          </div>
+        );
+      })}
 
       <main>
         <div className="productRows">
@@ -301,7 +323,8 @@ function Products() {
             <form
               style={{ display: "inline" }}
               action="checkout.html"
-              method="get">
+              method="get"
+            >
               <button className="buttonButton1">Buy Now</button>
             </form>
           </div>
