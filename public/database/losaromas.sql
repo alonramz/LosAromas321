@@ -5,6 +5,7 @@ USE losaromas;
 CREATE TABLE products (
 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 title VARCHAR(100),
+scent VARCHAR(50),
 size DECIMAL(3),
 price DECIMAL(3),
 image VARCHAR(255)
@@ -24,20 +25,20 @@ Data MEDIUMBLOB
 );
 
 
-INSERT INTO products (title, size, price) 
+INSERT INTO products (title, scent, size, price) 
 VALUES
-('Touch of Fall', 8, 10),
-('Innovative', 8, 10),
-('Admirer', 8, 10),
-('Romance', 10, 15),
-('Daylight', 10, 15),
-('Comfot', 10, 15),
-('Determined', 10, 15),
-('Infusion', 10, 15),
-('Euphoric', 10, 15),
-('Serene', 11, 15),
-('Brave', 12, 20),
-('Vino', 11, 15);
+('Touch of Fall', 'Vanilla Pumpkin Marshmallow', 8, 10),
+('Innovative', 'Grapefuit & Mango', 8, 10),
+('Admirer', 'Black Sea', 8, 10),
+('Romance', 'Amber Romance', 10, 15),
+('Daylight', 'Fruit Slices', 10, 15),
+('Comfort', 'Black Raspberry Vanilla', 10, 15),
+('Determined', 'Tobacco Bay Leaf', 10, 15),
+('Infusion', 'White Tea', 10, 15),
+('Euphoric', 'Tobacco Caramel', 10, 15),
+('Serene', 'White Sage Lavender', 11, 15),
+('Brave', 'Mahogany Teakwood', 12, 20),
+('Vino', 'Black Cherry Merlot', 11, 15);
 
 INSERT INTO content (id, top, middle, base)
 VALUES
