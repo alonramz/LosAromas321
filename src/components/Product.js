@@ -17,7 +17,7 @@ function Product({productObj}) {
           {productObj.size} <br />
           <br />
         </p>
-        <div className="middle">
+        <div className="productmiddle">
           <p>
             {productObj.top}<br />
             {productObj.middle} <br />
@@ -26,7 +26,7 @@ function Product({productObj}) {
           <em>{productObj.price}</em>
         </div>
       </div>
-      <form style={{ display: "inline" }} action="checkout.html" method="get">
+      <form style={{ display: "inline" }}>
         <button className="buttonButton1">Buy Now</button>
       </form>
     </div>

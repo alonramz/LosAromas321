@@ -1,15 +1,29 @@
 import React from "react";
 import productList from "../data.json";
-// import Product from "../components/Product";
+import Product from "../components/Product";
 import "./Products.css";
 // import '../App.css';
 import Nav from "../components/Nav.js";
 import Footer from "../components/Footer";
-import {useState} from 'react' 
+import {useState, useEffect} from 'react' 
 
 function Products() {
   //want to search the term with input and give string
   const [searchTerm, setSearchTerm] = useState('')
+  const [products, setProducts] = useState([])
+  useEffect(() => {
+    const getProducts = async() => {
+      let res = await fetch('http://localhost:3001/products')
+      res = await res.json()
+      console.log(res)
+      setProducts(res)
+    }
+    // Update the document title using the browser API
+    console.log('im using useeffect')
+    getProducts()
+
+  },[]);
+
   return (
     // {productList.map((p) => (
     //   <Product key={p.id} productObj={p} />
@@ -18,8 +32,6 @@ function Products() {
     <div className="Products">
       <Nav />
       <header>Candles</header>
-
-      {/* <Product /> */}
 
       {/* search bar, has an id and key from data.json */}
       <input type="text" placeholder="Search a scent..." onChange={event => {setSearchTerm(event.target.value)}}/>
@@ -41,7 +53,10 @@ function Products() {
 
       <main>
         <div className="productRows">
-          <div className="productContainers">
+          {productList.map(p => {
+            return <Product productObj={p}/>
+          })}
+          {/* <div className="productContainers">
             <div className="imageWrapper">
               <img
                 src="/images/6.png"
@@ -134,10 +149,10 @@ function Products() {
             >
               <button className="buttonButton1">Buy Now</button>
             </form>
-          </div>
+          </div> */}
         </div>
 
-        <div className="productRows">
+        {/* <div className="productRows">
           <div className="productContainers">
             <div className="imageWrapper">
               <img
@@ -183,7 +198,7 @@ function Products() {
                 10oz <br />
                 <br />
               </p>
-              <div className="productMiddle">
+              <div className="productmiddle">
                 <p>
                   Top: Fruity <br />
                   Middle: Tropical, Exotic <br />
@@ -231,10 +246,10 @@ function Products() {
               <button className="buttonButton1">Buy Now</button>
             </form>
           </div>
-        </div>
+        </div> */}
 
         {/* <!-- 10oz --> */}
-        <div className="productRows">
+        {/* <div className="productRows">
           <div className="productContainers">
             <div className="imageWrapper">
               <img
@@ -328,14 +343,14 @@ function Products() {
               <button className="buttonButton1">Buy Now</button>
             </form>
           </div>
-        </div>
+        </div> */}
 
-        <div className="rightSidebar2">
+        {/* <div className="rightSidebar2">
           <strong>Limited Time </strong>
-        </div>
+        </div> */}
 
         {/* <!--holiday edition--> */}
-        <div className="productRows">
+        {/* <div className="productRows">
           <div className="productContainers">
             <div className="imageWrapper">
               <img
@@ -431,8 +446,8 @@ function Products() {
             >
               <button className="buttonButton1">Buy Now</button>
             </form>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </main>
 
       <Footer />
