@@ -2,18 +2,18 @@
     {
         "id": 1,
         "title": "Touch of Fall",
-        "content": "Vanilla Pumpkin Marshmallow",
+        "scent": "Vanilla Pumpkin Marshmallow",
         "top": "Top: Sweet Cream", 
         "middle": "Middle: Pumpkin",
         "base": "Base: Bakery Spice",
-        "size": "8oz",
+        "size": "8 oz",
         "price": "$10",
         "imgSrc": "/images/6.png"
     },
     {
         "id": 2,
         "title": "Innovative",
-        "content": "Grapefruit Mango",
+        "scent": "Grapefruit Mango",
         "top": "Top: Orange, Mandarin, Lemon", 
         "middle": "Middle: Grapefruit, Peach",
         "base": "Base: Red Currant, Vanilla",
@@ -24,7 +24,7 @@
     {
         "id": 3,
         "title": "Admirer",
-        "content": "Black Sea",
+        "scent": "Black Sea",
         "top": "Top: Sea Salt, Citrus", 
         "middle": "Middle: Cardamom, Plum", 
         "base": "Base: Dark Musk, Amber",
@@ -35,7 +35,7 @@
     {
         "id": 4,
         "title": "Romance",
-        "content": "Amber Romance",
+        "scent": "Amber Romance",
         "top": "Top: Musk", 
         "middle": "Middle: Water Floral",
         "base": "Base: Vanilla, Sandalwood",
@@ -46,7 +46,7 @@
     {
         "id": 5,
         "title": "Daylight",
-        "content": "Fruit Slices",
+        "scent": "Fruit Slices",
         "top": "Top: Fruity",
         "middle": "Middle: Tropical, Exotic",
         "base": "Base: Driftwood",
@@ -57,7 +57,7 @@
     {
         "id": 6,
         "title": "Comfort",
-        "content": "Black Raspberry Vanilla",
+        "scent": "Black Raspberry Vanilla",
         "top": "Top: Cirtus, Raspberry",
         "middle": "Middle: Blackberry",
         "base": "Base: Vanilla",
@@ -68,7 +68,7 @@
     {
         "id": 7,
         "title": "Determined",
-        "content": "Tobacco Bay Leaf",
+        "scent": "Tobacco Bay Leaf",
         "size": "10 oz",
         "price": "$15",
         "top": "Top: Citrus", 
@@ -79,7 +79,7 @@
     {
         "id": 8,
         "title": "Infusion",
-        "content": "White Tea",
+        "scent": "White Tea",
         "size": "10 oz",
         "price": "$15",
         "top": "Top: Lemon, Mandarin", 
@@ -90,7 +90,7 @@
     {
         "id": 9,
         "title": "Euphoric",
-        "content": "Tobacco Caramel",
+        "scent": "Tobacco Caramel",
         "size": "10 oz",
         "price": "$15",
         "top": "Top: Orange", 
@@ -101,7 +101,7 @@
     {
         "id": 10,
         "title": "Serene",
-        "content": "White Sage Lavender",
+        "scent": "White Sage Lavender",
         "size": "11 oz",
         "price": "$15", 
         "top": "Top: Eucalyptus, Pine", 
@@ -112,7 +112,7 @@
     {
         "id": 11,
         "title": "Brave",
-        "content": "Mahogany Teakwood",
+        "scent": "Mahogany Teakwood",
         "size": "12 oz",
         "price": "$20",
         "top": "Top: Lavender", 
@@ -123,7 +123,7 @@
     {
         "id": 12,
         "title": "Vino",
-        "content": "Black Cherry Merlot",
+        "scent": "Black Cherry Merlot",
         "size": "11 oz",
         "price": "$15",
         "top": "Top: Black Currant", 

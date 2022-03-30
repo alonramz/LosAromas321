@@ -13,20 +13,6 @@ app.use(express.json()); //formatting all results into json
 
 //get route to respond to /products
 app.get("/products", (req, res) => {
-  let product1 = {
-    productName: "Touch of Fall",
-    productScent: "Vanilla Pumpkin Marshmallow",
-  };
-  let product2 = { productName: "Infusion", productScent: "White Tea" };
-  res.json([product1, product2]);
-
-  // res.send('nodemon auto aupdates when i save this file')
-});
-
-//route captures product id being stored in params
-app.get("/products/:id", (req, res) => {
-  console.log("fetching content with id:" + req.params.id);
-
   //connecting to the database and checking for errors if any are present
   //requesting password from root of mysql
   const connection = mysql.createConnection({
@@ -36,9 +22,8 @@ app.get("/products/:id", (req, res) => {
     database: "losaromas",
   });
 
-  const productId = req.params.id; // variable for product id to pass through in connection below
-  const queryString = "SELECT * FROM products WHERE id = ?"; //variable for queries
-  connection.query(queryString, [productId], (err, rows, fields) => {
+  const queryString = "SELECT * FROM products; "; //variable for queries
+  connection.query(queryString, (err, rows, fields) => {
     //if any errors return error
     //or return successful if database connection works
     if (err) {
@@ -47,7 +32,23 @@ app.get("/products/:id", (req, res) => {
       return;
     }
 
+    console.log(rows);
+    res.json(rows);
+
+
     console.log("i think we fetched products okay");
+
+  // res.send('nodemon auto aupdates when i save this file')
+});
+
+//route captures product id being stored in params
+app.get("/products/:id", (req, res) => {
+  console.log("fetching content with id:" + req.params.id);
+
+
+
+  const productId = req.params.id; // variable for product id to pass through in connection below
+  
 
     //map through products and rename rows to appear on site
     const products = rows.map((row) => {
