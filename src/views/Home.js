@@ -17,7 +17,7 @@ function Main() {
           {/* <!--button and link--> */}
           <form
             style={{ display: "inline" }}
-            action="products2.html"
+            action="/Products"
             method="get"
           >
             <button className="homebutton">Shop Now!</button>
@@ -112,7 +112,7 @@ function Main() {
           </div>
 
           <div className="sectionContainer">
-            <input type="submit" value="Subscribe" />
+            <input type="submit" value="Subscribe" required/>
           </div>
         </form>
       </section>

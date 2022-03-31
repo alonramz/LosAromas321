@@ -89,13 +89,20 @@ body {
   }
 
   /* for searach bar */
+.suggestion {
+  cursor: pointer;
+}
 
+.suggestion:hover {
+  background-color: seashell;
+}
 
   /* Small screens */
   @media all and (max-width: 375px) {
       .productRows {
-      flex-direction: column;
-      justify-content: space-around;
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
     } 
   }
 

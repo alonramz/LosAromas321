@@ -12,7 +12,7 @@ function Product({productObj}) {
         />
         <p>
           <strong>{productObj.title}</strong> <br />
-          {productObj.content}
+          {productObj.scent}
           <br />
           {productObj.size} <br />
           <br />
@@ -26,7 +26,8 @@ function Product({productObj}) {
           <em>{productObj.price}</em>
         </div>
       </div>
-      <form style={{ display: "inline" }}>
+      <form style={{ display: "inline" }} action="/Checkout"
+            method="get">
         <button className="buttonButton1">Buy Now</button>
       </form>
     </div>

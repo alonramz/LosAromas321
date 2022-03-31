@@ -5,7 +5,7 @@ const Footer = () => {
       <div>
         {/* <!-- footer --> */}
   <footer className="footer">
-    <p> Copyright &copy; 2021 Alondra Ramirez for Road to Hire eCommerce Project</p>
+    <p> Copyright &copy; 2022 Alondra Ramirez for Road to Hire e-Commerce Project: Version 2</p>
     {/* <!--logo--> */}
     <div className="gridItem"><img src="/images/logo.png" alt="logo" style={{width: "100px", height:"100px"}}/>
     </div>

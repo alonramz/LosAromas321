@@ -2,61 +2,111 @@ import React from "react";
 import productList from "../data.json";
 import Product from "../components/Product";
 import "./Products.css";
-// import '../App.css';
 import Nav from "../components/Nav.js";
 import Footer from "../components/Footer";
-import {useState, useEffect} from 'react' 
+import { useState, useEffect } from "react"; //useeffect allows to fetch api of my products
+import axios from "axios";
 
 function Products() {
   //want to search the term with input and give string
-  const [searchTerm, setSearchTerm] = useState('')
-  const [products, setProducts] = useState([])
-  useEffect(() => {
-    const getProducts = async() => {
-      let res = await fetch('http://localhost:3001/products')
-      res = await res.json()
-      console.log(res)
-      setProducts(res)
-    }
-    // Update the document title using the browser API
-    console.log('im using useeffect')
-    getProducts()
+  // const [searchTerm, setSearchTerm] = useState('')
 
-  },[]);
+  //fetch products with local host api
+  const [products, setProducts] = useState([]);
+  //usestate for text
+  const [text, setText] = useState('')
+  //suggestions
+  const [suggestions, setSuggestions] = useState([])
+  useEffect(() => {
+    const getProducts = async () => {
+      const response = await axios("http://localhost:3001/products");
+      // response = await response.json();
+      console.log(response);
+      setProducts(response.id.id);
+    }
+    //call async function
+    console.log("im using useeffect");
+    getProducts();
+  }, [])
+
+    const onSuggestHandler = (text) => {
+      setText(text);
+      setSuggestions([]);
+    }
+
+  const onChangeHandler = (text) => {
+    let matches = []
+    if (text.length > 0) {
+      matches =productList.filter(product => {
+        const regex = new RegExp(`${text}`, "gi");
+        return product.scent.match(regex)
+      })
+    }
+    console.log('matches', matches)
+    setSuggestions(matches)
+    setText(text)
+  }
 
   return (
-    // {productList.map((p) => (
-    //   <Product key={p.id} productObj={p} />
-    // ))}
-
     <div className="Products">
       <Nav />
       <header>Candles</header>
 
       {/* search bar, has an id and key from data.json */}
-      <input type="text" placeholder="Search a scent..." onChange={event => {setSearchTerm(event.target.value)}}/>
-      {/* setSearchTerm is assinged to whatver value is being searched */}
-      {productList.filter((id) => {
-        // filter method to fither out what we are searching for
-        if(searchTerm === "") {
-          return id
-        }else if (id.scent.toLowerCase().includes(searchTerm.toLowerCase())) {
-          return id
-        }
-      }).map((id, key) => {
-        return (
-          <div className="searchItems" key={key}>
-            <p className="scents">{id.scent} </p>
-          </div>
-        );
-      })}
+      <div className="productSearch">
+      <input
+        type="text" className="productSearchInput"
+        placeholder="Search a scent..." onChange={e => 
+          onChangeHandler(e.target.value)} value={text}
+      />
+
+      {suggestions && suggestions.map((suggestion, i) =>
+      <div key={i} className="suggestion"> {suggestion.scent}
+      </div>
+      )}
+
+      </div>
+
+
+      
+      {/* {productList.filter((id) => { */}
+
+          {/* filter method to fither out what we are searching for */}
+          {/* if (searchTerm === "") {
+            return id
+          } 
+          else if (
+            id.scent.toLowerCase().includes(searchTerm.toLowerCase())
+          ) 
+          {
+            return id;
+          }
+        })
+        .map((id, key) => {
+          return (
+            <div className="searchItems" key={key}>
+              <p className="scents">{id.scent} </p>
+            </div>
+          );
+        })}  */}
 
       <main>
         <div className="productRows">
-          {productList.map(p => {
-            return <Product productObj={p}/>
+          {productList.map((p) => {
+            return <Product productObj={p} />;
           })}
-          {/* <div className="productContainers">
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
+export default Products;
+
+{
+  /* <div className="productContainers">
             <div className="imageWrapper">
               <img
                 src="/images/6.png"
@@ -149,10 +199,12 @@ function Products() {
             >
               <button className="buttonButton1">Buy Now</button>
             </form>
-          </div> */}
-        </div>
+          </div> */
+}
+//</div>
 
-        {/* <div className="productRows">
+
+  /* <div className="productRows">
           <div className="productContainers">
             <div className="imageWrapper">
               <img
@@ -246,10 +298,14 @@ function Products() {
               <button className="buttonButton1">Buy Now</button>
             </form>
           </div>
-        </div> */}
+        </div> */
 
-        {/* <!-- 10oz --> */}
-        {/* <div className="productRows">
+
+
+  /* <!-- 10oz --> */
+
+
+  /* <div className="productRows">
           <div className="productContainers">
             <div className="imageWrapper">
               <img
@@ -343,14 +399,20 @@ function Products() {
               <button className="buttonButton1">Buy Now</button>
             </form>
           </div>
-        </div> */}
+        </div> */
 
-        {/* <div className="rightSidebar2">
+
+
+  /* <div className="rightSidebar2">
           <strong>Limited Time </strong>
-        </div> */}
+        </div> */
 
-        {/* <!--holiday edition--> */}
-        {/* <div className="productRows">
+
+
+  /* <!--holiday edition--> */
+
+
+  /* <div className="productRows">
           <div className="productContainers">
             <div className="imageWrapper">
               <img
@@ -446,13 +508,7 @@ function Products() {
             >
               <button className="buttonButton1">Buy Now</button>
             </form>
-          </div> */}
-        {/* </div> */}
-      </main>
+          </div> */
 
-      <Footer />
-    </div>
-  );
-}
 
-export default Products;
+  /* </div> */
