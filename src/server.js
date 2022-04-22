@@ -3,9 +3,7 @@ const app = express(); // new instance of express
 const cors = require("cors"); //cors is usually for apis most of the time,
 //can get you through permissions
 const mysql = require("mysql"); // pull the mysql package
-const morgan = require("morgan"); //morgan helps see requests and how long it takes to process
 
-app.use(morgan("combined")); //combined allows to see request and where theyre coming from
 app.use(cors()); //only using cors here
 app.use(express.json()); //formatting all results into json
 // getting the api endpoint and doing a db.query that selects all items from tables products in sql
@@ -70,30 +68,5 @@ app.get("/", (req, res) => {
 app.listen(3001, () => {
   console.log("server listening to port 3001");
 });
-
-// let myport = 4000;
-// app.listen(myport, () => {
-//   console.log(`port is running on ${myport}`);
-// });
-
-// app.get("/api/products/:size/:price", (req, res) => {
-//     const reqSize = req.params.size
-//     const reqPrice = req.params.price
-//     console.log(reqSize);
-//     db.query("SELECT * FROM products", (err, result) => {
-//       if (err) {
-//         console.log(err);
-//       } else {
-//         //res.send(result);
-//         //result is an array, method filter to go through each item and return
-//         result.filter(item => {
-//             if(item.size === reqSize && item.price === reqPrice){
-//                 console.log(item);
-//                 res.send(item)
-//             }
-//         })
-//       }
-//     });
-//   });
 
 
